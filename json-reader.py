@@ -13,7 +13,7 @@ def get_lat_long(country_code):
     with open('assets/countrycode-latlong-array.json') as f:
         data = json.load(f)
 
-    return data[country_code]
+    return data[country_code][0], data[country_code][1]
 
 def get_country_code(country):
 

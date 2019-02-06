@@ -44,19 +44,21 @@ def show_map():
     code1 = get_country_code(country1)
     code2 = get_country_code(country2)
 
-    latlong1 = get_lat_long(code1)
-    latlong2 = get_lat_long(code2)
+    lat1, long1 = get_lat_long(code1)
+    lat2, long2 = get_lat_long(code2)
 
     #print('code1 : ', code1)
 
     result = {
         'country1' : country1,
         'code1': code1,
-        'latlong1': latlong1,
+        'lat1': lat1,
+        'long1': long1,
 
         'country2' : country2,
         'code2': code2,
-        'latlong2': latlong2
+        'lat2': lat2,
+        'long2': long2
     }
     
     #return content
@@ -73,7 +75,7 @@ def get_lat_long(country_code):
     with open('assets/countrycode-latlong-array.json') as f:
         data = json.load(f)
 
-    return data[country_code]    
+    return data[country_code][0], data[country_code][1]
 
 def get_country_code(country):
 

@@ -66,14 +66,15 @@
 
                 // Add some plots on the map
                 , plots: {
+                    
                     // Image plot
-                    'india': {
+                    'one': {
                         type: "image",
                         url: "http://www.neveldo.fr/mapael/assets/img/marker.png",
                         width: 12,
                         height: 40,
-                        latitude: 20.00,
-                        longitude: 77.00,
+                        latitude: {{result.lat1}},
+                        longitude: {{result.long1}},
                         attrs: {
                             opacity: 1
                         },
@@ -82,13 +83,13 @@
                         }
                     },
 
-                    'canada': {
+                    'two': {
                         type: "image",
                         url: "http://www.neveldo.fr/mapael/assets/img/marker.png",
                         width: 12,
                         height: 40,
-                        latitude: 60.00,
-                        longitude: -95.00,
+                        latitude: {{result.lat2}},
+                        longitude: {{result.long2}},
                         attrs: {
                             opacity: 1
                         },
