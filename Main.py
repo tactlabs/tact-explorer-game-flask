@@ -62,7 +62,7 @@ def show_map():
     }
     
     #return content
-    return render_template('countrymap.html', result=result)    
+    return render_template('countrymap.html', result=result) 
 
 
 @app.route('/samplemap')
