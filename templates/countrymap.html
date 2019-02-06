@@ -21,7 +21,6 @@
         <div class="container">
             <div class="map">Alternative content</div>
         </div>
-
         
         <script>
             $(".container").mapael({
@@ -64,7 +63,40 @@
                         }
                     }
                 }
-                
+
+                // Add some plots on the map
+                , plots: {
+                    // Image plot
+                    'india': {
+                        type: "image",
+                        url: "http://www.neveldo.fr/mapael/assets/img/marker.png",
+                        width: 12,
+                        height: 40,
+                        latitude: 20.00,
+                        longitude: 77.00,
+                        attrs: {
+                            opacity: 1
+                        },
+                        attrsHover: {
+                            transform: "s1.5"
+                        }
+                    },
+
+                    'canada': {
+                        type: "image",
+                        url: "http://www.neveldo.fr/mapael/assets/img/marker.png",
+                        width: 12,
+                        height: 40,
+                        latitude: 60.00,
+                        longitude: -95.00,
+                        attrs: {
+                            opacity: 1
+                        },
+                        attrsHover: {
+                            transform: "s1.5"
+                        }
+                    }
+                }
             });
         </script>
 

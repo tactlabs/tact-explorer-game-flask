@@ -44,17 +44,23 @@ def show_map():
     code1 = get_country_code(country1)
     code2 = get_country_code(country2)
 
-    print('code1 : ', code1)
+    latlong1 = get_lat_long(code1)
+    latlong2 = get_lat_long(code2)
+
+    #print('code1 : ', code1)
 
     result = {
         'country1' : country1,
         'code1': code1,
+        'latlong1': latlong1,
+
         'country2' : country2,
-        'code2': code2
+        'code2': code2,
+        'latlong2': latlong2
     }
     
     #return content
-    return render_template('country-code.html', result=result)    
+    return render_template('countrymap.html', result=result)    
 
 
 @app.route('/samplemap')
@@ -82,7 +88,7 @@ def get_country_code(country):
         #print(item)
 
         if(item['name'].lower() == country):
-            return item['code']
+            return item['code'].lower()
 
 if __name__ == '__main__':
     host = os.environ.get('IP', '127.0.0.1')
